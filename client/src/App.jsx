@@ -4,6 +4,8 @@ import Navbar from './components/Navbar'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
+import Rides from "./pages/Rides";
+import Navigation from "./pages/Navigation";
 
 function App() {
   return (
@@ -15,10 +17,15 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/rides" element={<Rides />} />
         </Routes>
       </main>
     </div>
   )
 }
+<Route
+  path="/rides"
+  element={<Rides />}
+/>
 
 export default App

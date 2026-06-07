@@ -2,6 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const taskRoutes = require("./routes/taskRoutes");
+const rideRoutes = require(
+  "./routes/rideRoutes"
+);
 
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/auth");
@@ -20,6 +23,9 @@ app.use("/api/auth", authRoutes);
 
 // Task Routes
 app.use("/api/tasks", taskRoutes);
+
+// Ride Routes
+app.use("/api/rides", rideRoutes);
 
 app.get("/", (req, res) => {
   res.send("RideMate API Running 🚀");
